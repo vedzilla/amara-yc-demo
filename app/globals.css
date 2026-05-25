@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0E0C09;
-  --bg-deep: #080605;
-  --fg: #EFE7D2;
-  --vermilion: #C95436;
-  --line: #251F17;
+  --bg: #0a0814;
+  --bg-deep: #06040e;
+  --fg: #f0ede6;
+  --violet: #6f5bff;
+  --line: #1f1d38;
 }
 
 * {
@@ -27,8 +27,8 @@ body {
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   background-image:
-    radial-gradient(ellipse 90% 50% at 80% -10%, rgba(201, 84, 54, 0.14), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 10% 110%, rgba(201, 84, 54, 0.06), transparent 60%);
+    radial-gradient(ellipse 90% 50% at 80% -10%, rgba(111, 91, 255, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 10% 110%, rgba(111, 91, 255, 0.06), transparent 60%);
   background-attachment: fixed;
 }
 
@@ -44,7 +44,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #857E6E;
+  color: #7b7a8a;
 }
 
 .divider-dot::before {
@@ -62,11 +62,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #251F17;
+  background: #1f1d38;
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #36281c;
+  background: #2a2748;
 }
 
 @keyframes work-bar {
@@ -85,7 +85,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(201, 84, 54, 0.65),
+    rgba(111, 91, 255, 0.6),
     transparent
   );
   animation: work-bar 2s linear infinite;
@@ -126,7 +126,7 @@ body {
   float: left;
   padding: 0.08em 0.12em 0 0;
   margin-right: 0.04em;
-  color: #C95436;
+  color: #6F5BFF;
 }
 
 .pull-quote {
@@ -141,7 +141,7 @@ body {
 
 .masthead-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #3a2f24 12%, #C95436 50%, #3a2f24 88%, transparent);
+  background: linear-gradient(90deg, transparent, #4a4860 12%, #6F5BFF 50%, #4a4860 88%, transparent);
 }
 
 .diamond-rule {
@@ -154,12 +154,12 @@ body {
   content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #2e251b 50%, transparent);
+  background: linear-gradient(90deg, transparent, #2a2748 50%, transparent);
 }
 .diamond-rule-diamond {
   width: 6px;
   height: 6px;
-  background: #C95436;
+  background: #6F5BFF;
   transform: rotate(45deg);
   flex-shrink: 0;
 }
@@ -181,27 +181,27 @@ body {
 }
 
 .editorial-rule {
-  border-top: 1px solid #251F17;
-  border-bottom: 1px solid #251F17;
+  border-top: 1px solid #1f1d38;
+  border-bottom: 1px solid #1f1d38;
   padding-block: 3px;
   height: 7px;
 }
 
 .column-rule {
-  background: linear-gradient(180deg, transparent, #251F17 12%, #251F17 88%, transparent);
+  background: linear-gradient(180deg, transparent, #1f1d38 12%, #1f1d38 88%, transparent);
   width: 1px;
 }
 
 .byline {
   font-family: var(--font-fraunces), Georgia, serif;
   font-style: italic;
-  color: #9c9483;
+  color: #9b9889;
 }
 
 .footnote-ref {
   font-size: 0.7em;
   vertical-align: super;
-  color: #C95436;
+  color: #6F5BFF;
   margin-left: 1px;
   font-feature-settings: "sups";
 }
