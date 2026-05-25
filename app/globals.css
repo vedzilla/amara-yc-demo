@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0814;
-  --bg-deep: #06040e;
-  --fg: #f0ede6;
-  --violet: #6f5bff;
-  --line: #1f1d38;
+  --bg: #0E0C09;
+  --bg-deep: #080605;
+  --fg: #EFE7D2;
+  --vermilion: #C95436;
+  --line: #251F17;
 }
 
 * {
@@ -27,8 +27,8 @@ body {
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   background-image:
-    radial-gradient(ellipse 90% 50% at 80% -10%, rgba(111, 91, 255, 0.12), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 10% 110%, rgba(111, 91, 255, 0.06), transparent 60%);
+    radial-gradient(ellipse 90% 50% at 80% -10%, rgba(201, 84, 54, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 10% 110%, rgba(201, 84, 54, 0.06), transparent 60%);
   background-attachment: fixed;
 }
 
@@ -44,7 +44,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #7b7a8a;
+  color: #857E6E;
 }
 
 .divider-dot::before {
@@ -62,11 +62,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f1d38;
+  background: #251F17;
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a2748;
+  background: #36281c;
 }
 
 @keyframes work-bar {
@@ -85,7 +85,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(111, 91, 255, 0.6),
+    rgba(201, 84, 54, 0.65),
     transparent
   );
   animation: work-bar 2s linear infinite;
@@ -113,4 +113,113 @@ body {
   opacity: 0.03;
   pointer-events: none;
   animation: grain-shift 8s steps(10) infinite;
+}
+
+/* === EDITORIAL UTILITIES === */
+
+.drop-cap::first-letter {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 4.6em;
+  line-height: 0.78;
+  float: left;
+  padding: 0.08em 0.12em 0 0;
+  margin-right: 0.04em;
+  color: #C95436;
+}
+
+.pull-quote {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.22;
+  letter-spacing: -0.012em;
+  color: #F0EDE6;
+}
+
+.masthead-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #3a2f24 12%, #C95436 50%, #3a2f24 88%, transparent);
+}
+
+.diamond-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.diamond-rule::before,
+.diamond-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2e251b 50%, transparent);
+}
+.diamond-rule-diamond {
+  width: 6px;
+  height: 6px;
+  background: #C95436;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.tracking-mega {
+  letter-spacing: 0.42em;
+}
+
+.small-caps {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+}
+
+.roman-numeral {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-feature-settings: "lnum" off;
+}
+
+.editorial-rule {
+  border-top: 1px solid #251F17;
+  border-bottom: 1px solid #251F17;
+  padding-block: 3px;
+  height: 7px;
+}
+
+.column-rule {
+  background: linear-gradient(180deg, transparent, #251F17 12%, #251F17 88%, transparent);
+  width: 1px;
+}
+
+.byline {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  color: #9c9483;
+}
+
+.footnote-ref {
+  font-size: 0.7em;
+  vertical-align: super;
+  color: #C95436;
+  margin-left: 1px;
+  font-feature-settings: "sups";
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker {
+  animation: ticker-scroll 38s linear infinite;
+}
+
+@keyframes ink-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ink-rise {
+  animation: ink-rise 0.7s cubic-bezier(0.2, 0.65, 0.3, 1) both;
 }

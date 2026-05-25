@@ -9,32 +9,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Warmed ink — pulled away from navy/violet, toward dark printer's black
         ink: {
-          DEFAULT: "#0A0814",
-          deep: "#06040E",
-          raised: "#11101F",
-          panel: "#171530",
+          DEFAULT: "#0E0C09",
+          deep: "#080605",
+          raised: "#16130E",
+          panel: "#1E1A14",
         },
+        // Parchment / unbleached newsprint, not generic off-white
         cream: {
-          DEFAULT: "#F0EDE6",
-          soft: "#F7F5EF",
-          dim: "#C9C6BC",
+          DEFAULT: "#EFE7D2",
+          soft: "#F5EEDB",
+          dim: "#C8C0AB",
         },
+        // "violet" is kept as the class name for compatibility, but tuned
+        // to a bespoke vermilion / burnt-rust (Penguin Classics red, FT Pink-ish,
+        // Pentagram annual report territory). Decidedly NOT AI-startup purple.
         violet: {
-          DEFAULT: "#6F5BFF",
-          bright: "#8B78FF",
-          deep: "#5746E0",
-          tint: "#A89BFF",
-          glow: "rgba(111, 91, 255, 0.18)",
+          DEFAULT: "#C95436",
+          bright: "#E0683F",
+          deep: "#A33E1F",
+          tint: "#E89878",
+          glow: "rgba(201, 84, 54, 0.22)",
         },
         line: {
-          dark: "#1F1D38",
-          darker: "#15142A",
-          cream: "#D8D5CC",
+          dark: "#251F17",
+          darker: "#1A1610",
+          cream: "#D6CFB8",
         },
         dim: {
-          DEFAULT: "#7B7A8A",
-          cream: "#6A6A75",
+          DEFAULT: "#857E6E",
+          cream: "#6E6757",
         },
       },
       fontFamily: {
@@ -61,11 +66,11 @@ const config: Config = {
         "orb-glow": {
           "0%, 100%": {
             boxShadow:
-              "0 0 60px 0 rgba(111, 91, 255, 0.4), 0 0 120px 0 rgba(111, 91, 255, 0.15)",
+              "0 0 50px 0 rgba(201, 84, 54, 0.35), 0 0 110px 0 rgba(201, 84, 54, 0.12)",
           },
           "50%": {
             boxShadow:
-              "0 0 90px 10px rgba(111, 91, 255, 0.6), 0 0 180px 0 rgba(111, 91, 255, 0.25)",
+              "0 0 80px 10px rgba(201, 84, 54, 0.5), 0 0 170px 0 rgba(201, 84, 54, 0.2)",
           },
         },
         "subtle-float": {
@@ -83,9 +88,9 @@ const config: Config = {
       },
       backgroundImage: {
         "violet-grain":
-          "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(111, 91, 255, 0.18), transparent 60%)",
+          "radial-gradient(ellipse 80% 60% at 70% 0%, rgba(201, 84, 54, 0.18), transparent 60%)",
         "cream-grain":
-          "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(111, 91, 255, 0.08), transparent 60%)",
+          "radial-gradient(ellipse 80% 60% at 30% 0%, rgba(201, 84, 54, 0.08), transparent 60%)",
       },
     },
   },

@@ -29,11 +29,15 @@ export function Sidebar() {
   return (
     <aside className="fixed left-0 top-0 z-30 h-screen w-[244px] border-r border-line-dark bg-ink-deep/80 backdrop-blur-xl flex flex-col">
       <div className="px-5 pt-6 pb-5 border-b border-line-dark">
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5 text-cream/85">
           <TriangleMark size={22} />
-          <span className="text-cream text-[19px] font-medium tracking-tight">Amara</span>
+          <span className="font-italic-serif text-[22px] leading-none" style={{ paddingTop: 2 }}>
+            Amara
+          </span>
         </Link>
-        <div className="mt-1 label-micro text-dim/80 pl-[34px]">Agency Operating Layer</div>
+        <div className="mt-2 small-caps tracking-wider text-dim/85 pl-[34px] text-[10px]">
+          Agency operating layer
+        </div>
       </div>
 
       <nav className="flex-1 px-3 py-5">
