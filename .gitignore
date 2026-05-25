@@ -1,0 +1,29 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next
+.next
+out
+build
+
+# vercel
+.vercel
+
+# env
+.env*
+!.env.example
+
+# os / editor
+.DS_Store
+*.pem
+*.log
+.idea
+.vscode
+
+# pitch deck (kept locally, not in public repo)
+*.pdf
+
+# gstack browse skill cache
+.gstack/
