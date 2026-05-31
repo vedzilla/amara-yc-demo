@@ -47,7 +47,7 @@ export const SceneRefine: React.FC = () => {
               <span style={{ color: C.violetTint, fontSize: 14 }}>✎</span>
             </div>
             <div style={{ fontFamily: sans, fontSize: 22, color: C.cream }}>
-              Founder-led only — no drone shots. Drop test to{" "}
+              Founder-led only. No drone shots. Drop test to{" "}
               <span style={{ color: C.violetTint, fontWeight: 600, borderBottom: `2px solid ${C.violet}` }}>£500</span>.
             </div>
           </Bubble>
