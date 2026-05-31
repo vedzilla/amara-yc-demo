@@ -1,0 +1,25 @@
+{
+  "name": "amara-sizzle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Amara product sizzle reel — Remotion",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render AmaraSizzle out/amara-sizzle.mp4 --crf=16",
+    "still": "remotion still AmaraSizzle out/poster.png --frame=420"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.469",
+    "@remotion/google-fonts": "4.0.469",
+    "@remotion/renderer": "4.0.469",
+    "@remotion/transitions": "4.0.469",
+    "lucide-react": "^0.469.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.469"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5.7.0"
+  }
+}
