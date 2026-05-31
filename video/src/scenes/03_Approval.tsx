@@ -53,8 +53,8 @@ export const SceneApproval: React.FC = () => {
             </h2>
 
             <p style={{ ...reasoning, fontFamily: sans, fontSize: 26, lineHeight: 1.5, color: "rgba(240,237,230,0.85)", maxWidth: 700, marginTop: 28, fontWeight: 300 }}>
-              Lookalike fatigue on Meta. TikTok still has runway —{" "}
-              <span style={{ color: C.cream, fontWeight: 500 }}>shift £30/day across.</span>
+              Lookalike fatigue on Meta. TikTok still has runway.{" "}
+              <span style={{ color: C.cream, fontWeight: 500 }}>Shift £30/day across.</span>
             </p>
 
             <div style={{ ...reasoning, display: "flex", alignItems: "center", gap: 16, marginTop: 36 }}>

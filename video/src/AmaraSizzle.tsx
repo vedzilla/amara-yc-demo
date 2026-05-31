@@ -23,7 +23,7 @@ const D = {
   scan: 195,
   approval: 225,
   refine: 215,
-  brain: 180,
+  brain: 250,
   close: 92,
 };
 const TRANSITION = 12;

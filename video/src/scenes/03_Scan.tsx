@@ -43,7 +43,7 @@ export const SceneScan: React.FC = () => {
           <div>
             <SmallCaps size={19} color={C.violetBright} tracking={0.3}>Step two · Amara learns the account</SmallCaps>
             <h2 style={{ fontFamily: sans, fontSize: 60, fontWeight: 500, letterSpacing: "-0.03em", color: C.cream, margin: "14px 0 0" }}>
-              It reads everything — and learns your{" "}
+              It reads everything. It learns your{" "}
               <span style={{ fontFamily: serif, fontStyle: "italic", color: C.violetTint }}>clients &amp; methodology.</span>
             </h2>
           </div>
