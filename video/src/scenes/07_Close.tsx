@@ -10,9 +10,12 @@ export const SceneClose: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const brainIn = spring({ frame, fps, config: { damping: 200, mass: 0.9 } });
-  const mark = spring({ frame: frame - 10, fps, config: { damping: 200 } });
-  const tagline = spring({ frame: frame - 24, fps, config: { damping: 200 } });
+  // Hold all reveals until after the 12-frame crossfade so the close brain
+  // never double-exposes with the brain-scene brain during the transition.
+  const ENTER = 14;
+  const brainIn = spring({ frame: frame - ENTER, fps, config: { damping: 200, mass: 0.9 } });
+  const mark = spring({ frame: frame - ENTER - 10, fps, config: { damping: 200 } });
+  const tagline = spring({ frame: frame - ENTER - 24, fps, config: { damping: 200 } });
 
   return (
     <Background glowX={0.5} intensity={1.2}>
