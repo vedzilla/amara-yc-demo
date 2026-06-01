@@ -39,15 +39,15 @@ export const SceneScan: React.FC = () => {
     <Background glowX={0.5} intensity={0.9}>
       <AbsoluteFill style={{ padding: "70px 110px" }}>
         {/* heading */}
-        <div style={{ ...heading, display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
-          <div>
+        <div style={{ ...heading, display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 48 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
             <SmallCaps size={19} color={C.violetBright} tracking={0.3}>Step two · Amara learns the account</SmallCaps>
-            <h2 style={{ fontFamily: sans, fontSize: 60, fontWeight: 500, letterSpacing: "-0.03em", color: C.cream, margin: "14px 0 0" }}>
+            <h2 style={{ fontFamily: sans, fontSize: 60, fontWeight: 500, letterSpacing: "-0.03em", color: C.cream, margin: "14px 0 0", maxWidth: 980 }}>
               It reads everything. It learns your{" "}
               <span style={{ fontFamily: serif, fontStyle: "italic", color: C.violetTint }}>clients &amp; methodology.</span>
             </h2>
           </div>
-          <div style={{ textAlign: "right" }}>
+          <div style={{ textAlign: "right", width: 340, flexShrink: 0 }}>
             <div style={{ fontFamily: sans, fontSize: 38, fontWeight: 500, color: complete ? C.positive : C.cream, fontVariantNumeric: "tabular-nums" }}>
               {complete ? "✓ Account understood" : campaigns.toLocaleString()}
             </div>

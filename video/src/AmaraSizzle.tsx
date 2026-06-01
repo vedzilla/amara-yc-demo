@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Audio, staticFile, interpolate } from "remotion";
 import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 import { C } from "./theme";
@@ -42,6 +42,18 @@ const xfade = (
 export const AmaraSizzle: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: C.inkDeep }}>
+      {/* Music bed — fades in at the top, fades out under the close. */}
+      <Audio
+        src={staticFile("music.mp3")}
+        volume={(f) =>
+          interpolate(
+            f,
+            [0, 20, SIZZLE_DURATION - 45, SIZZLE_DURATION],
+            [0, 0.9, 0.9, 0],
+            { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+          )
+        }
+      />
       <TransitionSeries>
         <TransitionSeries.Sequence durationInFrames={D.open}>
           <SceneOpen />
